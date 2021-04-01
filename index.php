@@ -35,10 +35,16 @@ $a = $a - $b;
  ?>
 
 <h1><?php echo $h1 ?></h1>
+
+<footer> <!-- вывести текущий год в подвале при помощи встроенной функции date() -->
+	<p>
+		<?php echo date('Y'); ?> 
+    </p>
+</footer>
 </body>
 </html>
 
-//Home work 3 
+<!-- Home work 3 --> 
 
 <?php
 // 1 Задание 
@@ -176,6 +182,37 @@ if ($a == 0)
  if ($a != 0 && $a % 5 == 0)
 	echo '<br>' ."Buzz";
  if ($a != 0 && $a % 3 == 0 && $a % 5 == 0)
-	echo '<br>' ."FizzBuzz";
+	echo '<br>' ."FizzBuzz". '<br>';
 
 
+// Домашняя работа 4 
+
+
+function sumNumers(int $a, int $b) : int { 
+	$result_0 = $a + $b;
+	return $result_0;
+}
+function subNumers($a, $b) {
+	$result_1 = $a - $b;
+	return $result_1;
+}
+function multNumers($a, $b) {
+	$result_2 = $a * $b;
+	return $result_2;
+}
+
+function divNumers(int $a, int $b) : int { // с int возвращает целое число без остатка 
+	$result_3 = $a / $b;
+	return $result_3;
+}
+
+
+$result_0 = sumNumers(5, 6);
+$result_1 = subNumers(3, 6);
+$result_2 = multNumers(2, 5);
+$result_3 = divNumers(7, -3);
+
+echo $result_0 . '<br>';
+echo $result_1 . '<br>';
+echo $result_2 . '<br>';
+echo $result_3 . '<br>';
